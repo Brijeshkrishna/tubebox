@@ -2,12 +2,12 @@ import json
 
 import requests
 from gunlink import link
-from funtions import (
+from core.funtions import (
 
     scriptScraper,
 )
 
-from videoclass import (
+from core.videoclass import (
     __EndScreen__,
     __info__,
     __VideoUrls__,
@@ -17,7 +17,7 @@ from videoclass import (
 
 )
 
-from homeclass import (
+from core.homeclass import (
     __Home__,
     __Video__
 )
@@ -77,20 +77,6 @@ class Channel:
         return __Video__(self)
 
 
-def main():
-    import cProfile
-    import pstats
 
-    with cProfile.Profile() as p:
-        yt = Video(url_or_id="https://www.youtube.com/watch?v=eh3bxXHqF2U")
-        d = yt.Comments(10, 0)
-        print(d.comment.__len__())
-        d.tohtml(filename='eh3bxXHqF2U.html')
-
-    st = pstats.Stats(p)
-    # st.sort_stats(pstats.SortKey.CUMULATIVE)
-    # st.print_stats()
-    # st.dump_stats("c.prof")
-
-
-main()
+    
+ 
