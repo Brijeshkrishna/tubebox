@@ -1,7 +1,7 @@
 from setuptools import setup,find_packages
 from io import open
 
-version = "1.0.0"
+version = "1.0.1"
 
 
 def read(filename):
@@ -18,7 +18,7 @@ setup(
     author='brijeshkrishna',
     author_email='brijeshkrishna@gmail.com',
     url='https://github.com/brijeshkrishna/tubebox',
-    packages=['tubebox'],
+    packages=find_packages(),
     license='MIT',
     keywords=['tubebox', 'youtube','youtube-scaper','scaper','python'],
     install_requires=['requests','bs4','gunlink','lxml','numpy','pydantic'],
