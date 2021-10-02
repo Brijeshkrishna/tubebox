@@ -1,8 +1,8 @@
-
 from bs4 import BeautifulSoup as bs
 import json
 from typing import Optional
-from subclass import link
+import structure
+
 import requests
 
 
@@ -170,7 +170,7 @@ def editedornot(datestring: str) -> tuple[bool, str]:
         return False, datestring[:-4]
 
 
-def tohtml(commentdata, linkobj: Optional[link], filename: str):
+def tohtml(commentdata, linkobj: Optional[structure.link], filename: str):
     commentfiller: str = ''
     CRC = 1
 
