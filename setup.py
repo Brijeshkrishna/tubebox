@@ -12,7 +12,6 @@ def read(filename):
 setup(
     name='tubebox',
     version=version,
-    packages=find_packages(),
     description='Python youtube scaper',
     long_description=read('README.md'),
     long_description_content_type="text/markdown",
